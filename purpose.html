@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purpose</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    p {
+      font-size: 18px;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+    <h1>TeamBook's Purpose</h1>
+    <p>I'm an avid Football (soccer) watcher.</p>
+    <p>However, I can't watch all the games on time and miss out.</p>
+    <p>There are highlight videos on YouTube but sometimes even they take out the fun by spoiling the score in the thumbnail or title (ESPN booo!). </p><p> So I took a problem I had and many others like myself in ESPN's comment sections had and turned it into a solution in the form of a website. Now I can:</p>
+
+    <ol>
+      <li>Select a Team from Top Leagues</li>
+      <li>View Past and Future Matches by the selected Team< (without spoilers)/li>
+      <li>Watch Highlight of a game played by a team</li>
+    </ol>
+    <p><span><br>I know you guys said you didn't want API. However, I wanted to work on a problem that I had and that needed live updates that API could satisfy. It still accomplishes the requirements of add, delete, sort. Now I have a website that others and I can genuinely use. I also made something without API that also meets the requirements below just to showcase basic understanding of data structures..</span></p>
+    <label for="comment">Add a Comment: </label>
+    <input id="commentInput">
+    <button onclick="addComment()">Add Comment</button>
+    <div id="commentList"></div>
+    <a href="index.html" class="button">Back to Home</a>
+  </div>
+
+  <script>
+    let comments = [];
+
+    function addComment() {
+      const commentInput = document.getElementById('commentInput');
+      const comment = commentInput.value.trim();
+
+      if (comment !== '') {
+        comments.push(comment);
+        displayComments();
+        commentInput.value = '';
+      }
+    }
+
+    function displayComments() {
+      const commentList = document.getElementById('commentList');
+      commentList.innerHTML = '';
+
+      for(let i=0; i<comments.length; i++){
+        const comment = comments[i];
+        const commentDiv = document.createElement('div');
+        commentDiv.classList.add('comment');
+        commentDiv.textContent = comment;
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.classList.add('delete-button');
+        deleteButton.addEventListener('click', () => deleteComment(i));
+
+        commentDiv.appendChild(deleteButton);
+        commentList.appendChild(commentDiv);
+      }
+    }
+
+    function deleteComment(index) {
+      comments.splice(index, 1);
+      displayComments();
+    }
+
+    displayComments();
+  </script>
+</body>
+</html>

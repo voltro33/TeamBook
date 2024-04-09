@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Team</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="scriptAPI.js"></script>
+    
+
+</head>
+
+<body>
+
+
+    <div class="teamList">
+
+    </div>
+
+    <div style="margin:20px; padding-left: 20px;">
+        <label for="leagueSelect">League: </label>
+        <select id="leagueSelect" >
+            <option value="" disabled selected>Select a League</option>
+
+        </select>
+    
+        <label for="teamSelect">Team: </label>
+        <select id="teamSelect" >
+        </select>
+        <img style="width: 150px; height: 150px;" id="teamImage" src="" alt="">
+
+    </div>
+    <div style="margin:20px; padding-left: 10px;">
+        <button style="background-color: rgb(251, 205, 0);" id="addTeam">Add</button>
+        <button onclick="window.location.href='index.html'" style="background-color: rgb(156, 11, 11);">Cancel</button>
+    
+    </div>
+   
+</body>
+</html>

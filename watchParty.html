@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Highlight Video</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .match {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+  border: 3px dotted #660606;
+}
+
+.team-logo {
+  flex: 30%;
+  text-align: center;
+}
+
+.team-logo img {
+  width: 200px;
+  height: 200px;
+}
+  </style>
+</head>
+<body>
+  <h1>Watch The Games You Missed!</h1>
+  <button onclick="window.location.href='index.html'">Home</button>
+  <div>
+    <label for="teamSelect">Select a Team:</label>
+    <select id="teamSelect">
+        <option value="" disabled selected>Select Team</option>
+    </select>
+  </div>
+  <div id="matches"></div>
+  <script src="scriptVideoAPI.js"></script>
+</body>
+</html>
