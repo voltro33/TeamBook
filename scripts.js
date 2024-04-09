@@ -34,7 +34,7 @@ function displayTeamList() {
 function editCardContent(card, teamID, i) {
     fetch(`https://corsproxy.io/?https://api.football-data.org/v2/teams/${teamID}`, {
         headers: {
-            'X-Auth-Token': 'be3a4a0da29649b49f4e2993959b7c28'
+            'X-Auth-Token': '3ffc8b7376ce456eba25599a38e36bea'
         }
     })
     .then(response => response.json())
