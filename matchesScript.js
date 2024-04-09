@@ -94,4 +94,4 @@ function goFutureMatch() {
     window.location.href = `futureMatches.html?teamId=${teamId}`;
 }
 
-fetchLastFiveMatches(teamId, 2);
+fetchLastFiveMatches(teamId, 4); // I had to lower to reduce API calls
