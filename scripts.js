@@ -6,7 +6,7 @@ function showCards() {
     const templateCard = document.querySelector(".card");
 
     for (let i = 0; i < teams2.length; i++) {
-        let teamID = parseInt(teams2[i].replace(/\D/g, ''), 10);
+        let teamID = teams2[i];
 
         const nextCard = templateCard.cloneNode(true);
         editCardContent(nextCard, teamID, i);
