@@ -1,5 +1,5 @@
 function fetchFutureMatches(teamId, numMatch) {
-    const url = `https://corsproxy.io/?https://api.football-data.org/v2/teams/${teamId}/matches?status=SCHEDULED`;
+    const url = `https://proxy.cors.sh/?https://api.football-data.org/v2/teams/${teamId}/matches?status=SCHEDULED`;
     const headers = {
         'X-Auth-Token': 'be3a4a0da29649b49f4e2993959b7c28'
     };
