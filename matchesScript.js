@@ -1,5 +1,5 @@
 function fetchLastFiveMatches(teamId, numMatches) {
-    const url = `https://proxy.cors.sh/?https://api.football-data.org/v2/teams/${teamId}/matches?status=FINISHED&limit=${numMatches}`;
+    const url = `https://cors-anywhere.herokuapp.com/?https://api.football-data.org/v2/teams/${teamId}/matches?status=FINISHED&limit=${numMatches}`;
     const headers = {
         'X-Auth-Token': 'be3a4a0da29649b49f4e2993959b7c28'
     };
@@ -66,7 +66,7 @@ function fetchLastFiveMatches(teamId, numMatches) {
 }
 
 function findImage(teamID) {
-    return fetch(`https://corsproxy.io/?https://api.football-data.org/v2/teams/${teamID}`, {
+    return fetch(`https://cors-anywhere.herokuapp.com/?https://api.football-data.org/v2/teams/${teamID}`, {
         headers: {
             'X-Auth-Token': '3ffc8b7376ce456eba25599a38e36bea'
         }
