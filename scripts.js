@@ -32,7 +32,7 @@ function displayTeamList() {
 }
 
 function editCardContent(card, teamID, i) {
-    fetch(`https://cors-anywhere.herokuapp.com/http://example.com/?https://api.football-data.org/v2/teams/${teamID}`, {
+    fetch(`https://cors-anywhere.herokuapp.com/?https://api.football-data.org/v2/teams/${teamID}`, {
         headers: {
             'X-Auth-Token': '3ffc8b7376ce456eba25599a38e36bea'
         }
